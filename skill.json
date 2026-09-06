@@ -1,0 +1,36 @@
+{
+  "name": "genpark-flaky-test-timing-non-determinism-detector-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - Automated test suite run trace analyzer identifying non-deterministic timing races and shared state test flakiness.",
+  "homepage": "https://genpark.ai/mcp",
+  "author": "genpark",
+  "category": "service",
+  "tags": [
+    "flaky-tests",
+    "test-automation",
+    "timing-race",
+    "ci-cd",
+    "code-quality"
+  ],
+  "inputs": {
+    "test_suite": {
+      "type": "string"
+    },
+    "run_samples_count": {
+      "type": "integer"
+    }
+  },
+  "outputs": {
+    "flakiness_audit_id": {
+      "type": "string"
+    },
+    "root_cause_classification": {
+      "type": "string"
+    },
+    "recommended_remediation": {
+      "type": "string"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
